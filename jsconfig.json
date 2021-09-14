@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      // For autocomplete
+      "_pages/*": ["pages/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "terraform", "public", "styles"]
+}

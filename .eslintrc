@@ -1,0 +1,56 @@
+{
+  "root": true,
+  "parser": "@babel/eslint-parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "airbnb",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [["_pages", "./pages/"]],
+        "extensions": [".js", ".jsx", ".json"]
+      }
+    }
+  },
+  "plugins": ["simple-import-sort", "react"],
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "react/react-in-jsx-scope": "off",
+    "sort-vars": ["error", { "ignoreCase": true }],
+    "semi": [2, "never"],
+    "no-unused-vars": [
+      2,
+      { "args": "all", "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+    ],
+    "object-curly-newline": "off"
+  },
+  "globals": {
+    "React": "writable"
+  }
+}
